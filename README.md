@@ -62,3 +62,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## php artisan
+melihat semua fitur artisan
+
+## git ignore/.gitignore
+memberi tahu bagaimana yg tidak perlu di commit ke dalama Git Repository
+
+## php artisan perintah--help
+melihat detail informasi perintah
+
+## php artisan serve --port=9090
+ganti port default 8000 menjadi 9090
+
+## php artisan make:test ContohTest
+perintah membuat unit test
+
+## php artisan make:test ContohTest --unit
+perintah membuat unit test dan memberi tahu kalau itu unit test bukan integration/feature test
+masuk ke folder test/Unit
