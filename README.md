@@ -98,3 +98,10 @@ NOTE : ketika ada penambahan di file konfigurasinya perubahan nya tidak akan ter
 
 ## php artisan config:clear
 perintah menghapus cache konfigurasi
+
+## Dependency Injection
+Contoh nya ada di file App\Data
+                       Foo.php
+                       Bar.php
+
+DependencyInjectionTest.php
