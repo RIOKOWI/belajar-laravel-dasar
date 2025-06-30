@@ -82,3 +82,9 @@ perintah membuat unit test
 ## php artisan make:test ContohTest --unit
 perintah membuat unit test dan memberi tahu kalau itu unit test bukan integration/feature test
 masuk ke folder test/Unit
+
+## php artisan test --filter=NamaTest
+running unit test yang di pilih
+
+## php artisan test
+running semua unit test
