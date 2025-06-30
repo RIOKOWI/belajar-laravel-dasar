@@ -88,3 +88,13 @@ running unit test yang di pilih
 
 ## php artisan test
 running semua unit test
+
+## Configuration Cache
+proses lebih cepat karena tidak perlu load semua konfigurasi
+
+## php artisan config:cache
+perintah membuat konfigurasi cache
+NOTE : ketika ada penambahan di file konfigurasinya perubahan nya tidak akan terlihat, harus buat ulang cache nya
+
+## php artisan config:clear
+perintah menghapus cache konfigurasi
