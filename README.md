@@ -112,6 +112,9 @@ Contoh di file ServiceContainerTest.php dan Person.php
 ## =================================================================== ##
 
 ## SERVICE PROVIDER
+contoh liat di file :
+FooBarProvider.php
+FooBarServiceProviderTest.php
 
 ## php artisan make:provider NamaServiceProvider
 perintah membuat service provider
