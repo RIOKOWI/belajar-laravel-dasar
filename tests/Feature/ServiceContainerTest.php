@@ -6,6 +6,12 @@ use App\Data\Bar;
 use App\Data\Foo;
 use Tests\TestCase;
 use App\Data\Person;
+use App\Services\CalculatorService as ServicesCalculatorService;
+use App\Services\HelloService;
+use App\Services\HelloServiceIndonesia;
+use App\Services\CalculatorService;
+use App\Services\SimpleCalculatorService;
+use App\Services\SimpleCalculatorService as ServicesSimpleCalculatorService;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -99,5 +105,28 @@ class ServiceContainerTest extends TestCase
         self::assertNotSame($foo, $bar);
         self::assertEquals($foo, $bar->foo);
         
+    }
+
+
+    public function testHelloService()
+    {
+        $this->app->singleton(HelloService::class, HelloServiceIndonesia::class);
+
+        // untuk yang lebih kompleks
+        $this->app->singleton(HelloService::class, function($app){
+            return new HelloServiceIndonesia();  
+    });
+
+        $helloService = $this->app->make(HelloService::class);
+        self::assertEquals("Halo Rio", $helloService->hello("Rio"));
+    }
+
+
+    public function testCalculator()
+    {
+        $this->app->singleton(CalculatorService::class, SimpleCalculatorService::class);
+
+        $result = $this->app->make(CalculatorService::class);
+        self::assertEquals("6", $result->count(3, 3));
     }
 }
