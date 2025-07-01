@@ -106,5 +106,12 @@ Contoh nya ada di file App\Data
 
 DependencyInjectionTest.php
 
-## Service Container
+## SERVICE CONTAINER
 Contoh di file ServiceContainerTest.php dan Person.php
+
+## =================================================================== ##
+
+## SERVICE PROVIDER
+
+## php artisan make:provider NamaServiceProvider
+perintah membuat service provider
