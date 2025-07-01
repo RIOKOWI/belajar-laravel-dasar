@@ -118,3 +118,8 @@ FooBarServiceProviderTest.php
 
 ## php artisan make:provider NamaServiceProvider
 perintah membuat service provider
+
+## php artisan cache:clear
+perintah untuk menghapus cache, contoh nya memnidahkan service eager ke deferred
+contoh liat di file :
+cache\services.php
