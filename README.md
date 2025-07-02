@@ -123,3 +123,9 @@ perintah membuat service provider
 perintah untuk menghapus cache, contoh nya memnidahkan service eager ke deferred
 contoh liat di file :
 cache\services.php
+
+## FACADES
+class yang menyediakan static akses ke fitur di service container atau application
+(digunakan jika butuh saja)
+contoh di file :
+FacadeTest.php
