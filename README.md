@@ -137,3 +137,15 @@ RoutingTest.php
 
 ## php artisan route:list
 perintah untuk melihat semua route
+
+## VIEW
+contoh liat di file :
+web.php
+hello.blade.php
+ViewTest.php
+
+## php artisan view:cache
+menyimpan semua hasil compile view di storage/framework/views
+
+## php artisan view:clear
+menghapus semua hasil compile view di storage/framework/views

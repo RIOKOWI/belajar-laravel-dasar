@@ -30,3 +30,20 @@ Route::redirect('/instagram','/rio');
 Route::fallback(function(){
     return "404 DONGO LUWH";
 });
+
+            // url,   view,    ,variable {{ $name }}
+Route::view('/hello', 'hello', ['name' => 'Rio Achyar']);
+
+// atau pake ini juga bisa
+Route::get('/hellocuk', function(){
+    return view('hello', ['name' => 'Rio Achyar']);
+});
+
+//NESTED VIEW
+            // url,   view,    ,variable {{ $name }}
+Route::view('/world', 'hello.world', ['name' => 'Rio Achyar']);
+
+// atau pake ini juga bisa
+Route::get('/world1', function(){
+    return view('hello.world', ['name' => 'Rio Achyar']);
+});
