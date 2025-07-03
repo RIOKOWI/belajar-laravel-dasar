@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/rio', function(){
+    return "Rio Ganteng Bgt";
+});
+
+
+// redirect jika akses /instagram akan ke /rio ('from','to')
+Route::redirect('/instagram','/rio');
+
+
+// follback route untuk mengubah tampilan error
+Route::fallback(function(){
+    return "404 DONGO LUWH";
+});

@@ -129,3 +129,11 @@ class yang menyediakan static akses ke fitur di service container atau applicati
 (digunakan jika butuh saja)
 contoh di file :
 FacadeTest.php
+
+## ROUTING
+contoh liat file:
+web.php
+RoutingTest.php
+
+## php artisan route:list
+perintah untuk melihat semua route
