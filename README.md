@@ -149,3 +149,13 @@ menyimpan semua hasil compile view di storage/framework/views
 
 ## php artisan view:clear
 menghapus semua hasil compile view di storage/framework/views
+
+## STATIC FILE
+contoh di file :
+index.js
+index.css
+app.js
+app.css
+
+ ## npm run prod
+ fungsinya untuk minify file css dan js khusus node js yang nantinya di taruh di folder public 
