@@ -158,4 +158,9 @@ app.js
 app.css
 
  ## npm run prod
- fungsinya untuk minify file css dan js khusus node js yang nantinya di taruh di folder public 
+ fungsinya untuk minify file css dan js khusus node js yang nantinya di taruh di folder public
+
+## ROUTE PARAMETER 
+contoh di file :
+web.php
+RoutingTest.php
