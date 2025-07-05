@@ -1,0 +1,22 @@
+<?php
+
+namespace Tests\Feature;
+
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
+
+class ControllerTest extends TestCase
+{
+    
+    public function testController()
+    {
+        $this->get('/controller/halo')->assertSeeText("Hello World");
+    }
+
+    public function testHelloService()
+    {
+        $this->get('controller/hello/rio')
+        ->assertSeeText("Halo rio");
+    }
+}

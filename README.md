@@ -169,3 +169,12 @@ RoutingTest.php
 contoh di file :
 web.php
 RoutingTest.php
+
+## php artisan make:controller NamaController
+perintah untuk membuat controller
+
+## CONTROLLER
+liat di file :
+HelloController.php
+ControllerTest.php
+web.php
