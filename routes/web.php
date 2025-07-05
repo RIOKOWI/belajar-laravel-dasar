@@ -86,3 +86,31 @@ Route::get('conflicts/embud', function(){
 
 
 
+// NAMED ROUTE
+Route::get('/products/{id}', function($productId){
+    return "Product : " . $productId;
+})->name('product.detail');
+
+Route::get('/products/{product}/items/{item}', function($productId, $itemId){
+    return "Product : " . $productId . " Item ; " . $itemId;
+})->name('product.item.detail');
+
+Route::get('/categories/{id}', function(string $categoryId){
+    return "Category : " . $categoryId;    
+})->where('id', '[0-9]+[a-z]+')->name('category.detail');
+
+Route::get('users/{id}', function(string $userId = '404'){
+    return "User : " . $userId;
+})->name('user.detail');
+
+Route::get('produk/{id}', function($id){
+    $link = route('product.detail', ['id' => $id]);
+    return "Link : " . $link;
+});
+
+Route::get('produk-redirect/{id}', function($id){
+    return redirect()->route('product.detail', ['id' => $id]);
+});
+
+
+

@@ -164,3 +164,8 @@ app.css
 contoh di file :
 web.php
 RoutingTest.php
+
+## NAMED ROUTR
+contoh di file :
+web.php
+RoutingTest.php
