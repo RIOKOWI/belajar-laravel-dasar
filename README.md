@@ -189,10 +189,19 @@ web.php
 
 ## INPUT REQUEST
 liat di file :
-web.php
 InputControllerTest.php
 InputController.php
+web.php
 
 ## INPUTT TYPE
+liat di file :
+web.php
+InputTypeControllerTest.php
+InputTypeController.php
+
+## FILTER REQUEST INPUT
+InputController.php
+web.php
+FilterRequestInputControllerTest.php
 
 

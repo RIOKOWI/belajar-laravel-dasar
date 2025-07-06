@@ -34,4 +34,32 @@ class InputController extends Controller
         $prices = $request->input('products.*.price');
         return json_encode([$names, $prices]);
     }
+
+    // FILTER REQUEST INPUT
+    public function filterOnly(Request $request): string
+    {
+        $name = $request->only(['name.first', 'name.last']);
+        return json_encode($name);
+    }
+
+    public function filterExcept(Request $request): string
+    {
+        $user = $request->except('admin');
+        return json_encode($user);
+    }
+
+    // MERGE INPUT
+    public function mergeInput(Request $request): string
+    {
+        $request->merge(['admin' => false]);
+        $user = $request->input();
+        return json_encode($user);
+    }
+
+    public function mergeIfMissingInput(Request $request): string
+    {
+        $request->mergeIfMissing(['admin' => false]);
+        $user = $request->input();
+        return json_encode($user);
+    }
 }

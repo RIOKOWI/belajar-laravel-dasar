@@ -140,3 +140,11 @@ Route::post('/input/hello/array', [InputController::class, 'helloArray']);
 
 //INPUT TYPE
 Route::post('/input/type', [InputTypeController::class, 'inputType']);
+
+// FILTER REQUEST INPUT
+Route::post('/input/filter/only', [InputController::class, 'filterOnly']);
+Route::post('/input/filter/except', [InputController::class, 'filterExcept']);
+
+// MERGE INPUT 
+Route::post('input/merge', [InputController::class, 'mergeInput']);
+Route::post('input/merge/missing', [InputController::class, 'mergeIfMissingInput']);
