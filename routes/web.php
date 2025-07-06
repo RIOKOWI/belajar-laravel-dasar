@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\InputController;
+use App\Http\Controllers\InputTypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -136,3 +137,6 @@ Route::post('/input/hello/input', [InputController::class, 'allInput']);
 
 // AMBIL SEMUA INPUT ARRAY
 Route::post('/input/hello/array', [InputController::class, 'helloArray']);
+
+//INPUT TYPE
+Route::post('/input/type', [InputTypeController::class, 'inputType']);

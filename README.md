@@ -188,3 +188,11 @@ ControllerTest.php
 web.php
 
 ## INPUT REQUEST
+liat di file :
+web.php
+InputControllerTest.php
+InputController.php
+
+## INPUTT TYPE
+
+
