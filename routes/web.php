@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\InputController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -116,9 +117,22 @@ Route::get('produk-redirect/{id}', function($id){
 
 // ROUTE CONTROLLER
 Route::get('/controller/halo', [HelloController::class, 'halo']);
-//akses url          // controller class     //function method
+//akses url                     // controller class     //function method
 
 // REQUEST
 Route::get('/controller/hello/request', [HelloController::class, 'request']);
 
 Route::get('/controller/hello/{name}', [HelloController::class, 'hello']);
+
+// INPUT REQUEST
+Route::get('/input/hello/', [InputController::class, 'hello']);
+Route::post('/input/hello/', [InputController::class, 'hello']);
+
+// NESTED INPUT REQUEST
+Route::post('/input/hola/', [InputController::class, 'firstName']);
+
+// AMBIL SEMUA INPUT
+Route::post('/input/hello/input', [InputController::class, 'allInput']);
+
+// AMBIL SEMUA INPUT ARRAY
+Route::post('/input/hello/array', [InputController::class, 'helloArray']);

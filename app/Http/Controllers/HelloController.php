@@ -39,8 +39,8 @@ class HelloController extends Controller
     public function request(Request $request): string
     {
         return $request->path() . "<br>" .
-                $request->url() . "<br>" .
-                $request->fullUrl() . "<br>" .
+                $request->url() . "<br>" . // http://localhost/controller/hello/request
+                $request->fullUrl() . "<br>" . // http://localhost/controller/hello/request?foo=bar
                 $request->method() . "<br>" .
                 $request->header('accept') . "<br>";
     }
