@@ -215,3 +215,7 @@ FileSystem.php
 perintah untuk membuat link
 
 ## FILE UPLOAD
+contoh di file :
+FileControllerTest.php
+FileController.php
+web.php

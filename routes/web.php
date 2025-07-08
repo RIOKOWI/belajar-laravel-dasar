@@ -4,6 +4,7 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\InputTypeController;
+use App\Http\Controllers\ResponseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -152,3 +153,6 @@ Route::post('input/merge/missing', [InputController::class, 'mergeIfMissingInput
 
 // FILE UPLOAD
 Route::post('upload/file', [FileController::class, 'upload']);
+
+//RESPONSE
+Route::get('/response', [ResponseController::class, 'response']);
