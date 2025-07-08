@@ -5,6 +5,7 @@ use App\Http\Controllers\HelloController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\InputTypeController;
 use App\Http\Controllers\ResponseController;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -156,3 +157,6 @@ Route::post('upload/file', [FileController::class, 'upload']);
 
 //RESPONSE
 Route::get('/response', [ResponseController::class, 'response']);
+
+// HTTP Response Header
+Route::get('/response/header', [ResponseController::class, 'header']);
