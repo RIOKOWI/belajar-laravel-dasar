@@ -205,8 +205,13 @@ web.php
 FilterRequestInputControllerTest.php
 
 ## FILE STORAGE
+https://laravel.com/docs/9.x/filesystem#the-public-disk
 https://github.com/thephpleague/flysystem
+contoh di file :
+FileSystem.php
 
 ## STORAGE LINK
 ## php artisan storage:link
 perintah untuk membuat link
+
+## FILE UPLOAD

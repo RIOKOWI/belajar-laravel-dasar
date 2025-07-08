@@ -1,0 +1,22 @@
+<?php
+
+namespace Tests\Feature;
+
+
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Http\UploadedFile;
+use Tests\TestCase;
+
+class FileControllerTest extends TestCase
+{
+    
+    public function testUpload()
+    {
+        $picture = UploadedFile::fake()->image('Rio.jpg');
+
+        $this->post('upload/file', [
+            'picture' => $picture
+        ])->assertSeeText("OK Rio.jpg");
+    }
+}

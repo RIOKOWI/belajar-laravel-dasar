@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\InputTypeController;
@@ -148,3 +149,6 @@ Route::post('/input/filter/except', [InputController::class, 'filterExcept']);
 // MERGE INPUT 
 Route::post('input/merge', [InputController::class, 'mergeInput']);
 Route::post('input/merge/missing', [InputController::class, 'mergeIfMissingInput']);
+
+// FILE UPLOAD
+Route::post('upload/file', [FileController::class, 'upload']);
