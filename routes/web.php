@@ -160,3 +160,11 @@ Route::get('/response', [ResponseController::class, 'response']);
 
 // HTTP Response Header
 Route::get('/response/header', [ResponseController::class, 'header']);
+
+//RESPONSE TYPE
+Route::get('/response/view', [ResponseController::class,'responseView']);
+Route::get('/response/json', [ResponseController::class,'jsonResponse']);
+
+//RESPONSE TYPE FILE DAN DOWNLOAD
+Route::get('/response/file', [ResponseController::class,'responseFile']);
+Route::get('/response/download', [ResponseController::class,'responseDownload']);
