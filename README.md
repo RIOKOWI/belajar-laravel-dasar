@@ -207,4 +207,6 @@ FilterRequestInputControllerTest.php
 ## FILE STORAGE
 https://github.com/thephpleague/flysystem
 
-
+## STORAGE LINK
+## php artisan storage:link
+perintah untuk membuat link
