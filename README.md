@@ -227,6 +227,12 @@ ResponseController.php
 ResponseControllerTest.php
 
 ## ENCRYPTION
+contoh di file :
+EncryptionTest.php
+
 ## php artisan key:generate
 untuk generate APP_KEY di .env,kalau sudah ada tidak akan di generate
+
+## COOKIE
+
 
