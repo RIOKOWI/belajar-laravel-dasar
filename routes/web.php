@@ -170,8 +170,11 @@ Route::get('/response/json', [ResponseController::class,'jsonResponse']);
 Route::get('/response/file', [ResponseController::class,'responseFile']);
 Route::get('/response/download', [ResponseController::class,'responseDownload']);
 
-// COOKIE
-Route::get('/cookie/set', [CookieController::class, 'createCookie']);
 
+// COOKIE
+// BUAT COOKIE
+Route::get('/cookie/set', [CookieController::class, 'createCookie']);
 // MENERIMA COOKIE
 Route::get('/cookie/get', [CookieController::class, 'getCookie']);
+// CLEAR COOKIE
+Route::get('/cookie/clear', [CookieController::class, 'clearCookie']);

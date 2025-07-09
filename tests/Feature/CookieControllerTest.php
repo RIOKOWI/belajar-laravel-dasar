@@ -26,4 +26,11 @@ class CookieControllerTest extends TestCase
             'isMember' => true
         ]);
     }
+
+    public function testClearCookie()
+    {
+        $this->get('/cookie/clear')
+        ->assertCookie('User-Id')
+        ->assertCookie('Is-Member');
+    }
 }

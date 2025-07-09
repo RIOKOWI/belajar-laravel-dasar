@@ -27,4 +27,12 @@ class CookieController extends Controller
                                                     // kalau tidak ada = pakai false
         ]);
     }
+
+    // CLEAR COOKIE
+    public function clearCookie(Request $request): Response
+    {
+        return response('clear cookie')
+        ->withoutCookie('User-Id')
+        ->withoutCookie('Is-Member');
+    }
 }
