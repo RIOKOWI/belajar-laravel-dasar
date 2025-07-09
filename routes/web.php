@@ -172,3 +172,6 @@ Route::get('/response/download', [ResponseController::class,'responseDownload'])
 
 // COOKIE
 Route::get('/cookie/set', [CookieController::class, 'createCookie']);
+
+// MENERIMA COOKIE
+Route::get('/cookie/get', [CookieController::class, 'getCookie']);
