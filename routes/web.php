@@ -183,3 +183,7 @@ Route::get('/cookie/clear', [CookieController::class, 'clearCookie']);
 //REDIRECT
 Route::get('/redirect/to', [RedirectController::class, 'redirectTo']);
 Route::get('/redirect/from', [RedirectController::class, 'redirectFrom']);
+// REDIRECT TO NAMED ROUTES
+Route::get('/redirect/name', [RedirectController::class, 'redirectName']);
+Route::get('/redirect/name/{name}', [RedirectController::class, 'redirectHello'])
+->name('redirect-hello');
