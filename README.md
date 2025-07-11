@@ -234,5 +234,15 @@ EncryptionTest.php
 untuk generate APP_KEY di .env,kalau sudah ada tidak akan di generate
 
 ## COOKIE
+contoh di file :
+CookieController.php
+CookieControllerTest.php
+web.php
+
+## REDIRECT
+contoh di file :
+web.php
+RedirectController.php
+RedirectControllerTest.php
 
 

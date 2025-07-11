@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\CookieController;
+use GuzzleHttp\Psr7\Response;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\InputController;
-use App\Http\Controllers\InputTypeController;
+use App\Http\Controllers\CookieController;
+use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ResponseController;
-use GuzzleHttp\Psr7\Response;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InputTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -178,3 +179,7 @@ Route::get('/cookie/set', [CookieController::class, 'createCookie']);
 Route::get('/cookie/get', [CookieController::class, 'getCookie']);
 // CLEAR COOKIE
 Route::get('/cookie/clear', [CookieController::class, 'clearCookie']);
+
+//REDIRECT
+Route::get('/redirect/to', [RedirectController::class, 'redirectTo']);
+Route::get('/redirect/from', [RedirectController::class, 'redirectFrom']);
