@@ -245,4 +245,7 @@ web.php
 RedirectController.php
 RedirectControllerTest.php
 
+## MIDDLEWARE
 
+## php artisan make:middleware NamaMiddleware
+perintah untuk membuat middleware baru
