@@ -2,9 +2,10 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class MiddlewareTest extends TestCase
 {
@@ -52,5 +53,14 @@ class MiddlewareTest extends TestCase
         ->get('/middleware/param')
         ->assertStatus(200)
         ->assertSeeText('PARAM');
+    }
+
+    public function testUpload()
+    {
+        $picture = UploadedFile::fake()->image('kunti.jpg');
+
+        $this->post('file/upload', [
+            'picture' => $picture
+        ])->assertSeeText("OK kunti.jpg");
     }
 }

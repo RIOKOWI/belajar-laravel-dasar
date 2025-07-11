@@ -266,3 +266,6 @@ membuat group middleware agar bisa di pakai secara global
 
 ## MIDDLEWARE PARAMETER
 membuat middleware yang bisa menerima parameter
+
+## EXCLUDE MIDDLEWARE
+membuat middleware yang bisa di exclude withoutMiddleware()

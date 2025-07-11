@@ -10,6 +10,7 @@ use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ResponseController;
 use App\Http\Controllers\InputTypeController;
 use App\Http\Middleware\ContohMiddleware;
+use App\Http\Middleware\VerifyCsrfToken;
 
 /*
 |--------------------------------------------------------------------------
@@ -208,5 +209,8 @@ Route::get('/middleware/group', function(){
 Route::get('/middleware/param', function(){
     return 'PARAM';
 })->middleware('contoh:RIO,401');
+
+// EXCLUDE MIDDLEWARE
+Route::post('/file/upload', [FileController::class, 'upload'])->withoutMiddleware([VerifyCsrfToken::class]);
 
 
