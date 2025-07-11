@@ -9,6 +9,7 @@ use App\Http\Controllers\CookieController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ResponseController;
 use App\Http\Controllers\InputTypeController;
+use App\Http\Middleware\ContohMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -191,3 +192,9 @@ Route::get('/redirect/name/{name}', [RedirectController::class, 'redirectHello']
 Route::get('/redirect/action', [RedirectController::class, 'redirectAction']);
 // REDIRECT TO EXTERNAL DOMAIN
 Route::get('/redirect/external', [RedirectController::class, 'externalDomain']);
+
+// ROUTE MIDDLEWARE
+Route::get('/middleware/api', function(){
+    return 'OK';
+})->middleware(['contoh']);
+              // boleh pakai ContohMIddleware::class

@@ -249,3 +249,9 @@ RedirectControllerTest.php
 
 ## php artisan make:middleware NamaMiddleware
 perintah untuk membuat middleware baru
+
+## GLOBAL MIDDLEWARE 
+meregistrasikan middleware di kernel agar bisa di pakai secara global
+
+## ROUTE MIDDLEWARE
+registrasikan middleware satu satu per route atau bisa langsung buat group middleware di kernel
