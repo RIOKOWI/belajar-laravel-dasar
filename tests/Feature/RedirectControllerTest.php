@@ -30,15 +30,15 @@ class RedirectControllerTest extends TestCase
 
     public function testRedirectController()
     {
-        $this->get('/redirect/controll')
-        ->assertSeeText('HALO cuk');
+        $this->get('/redirect/action')
+        ->assertRedirect('/redirect/name/rio');
         
     }
-    public function testRedirectController1()
+    
+    public function testExternalDomain()
     {
-        $this->get('/redirect/controll/embut')
-        ->assertSeeText('HALO embut');
-        
+        $this->get('/redirect/external')
+        ->assertRedirect('www.rioganteng.com');
     }
 
 }

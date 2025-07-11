@@ -36,5 +36,11 @@ class RedirectController extends Controller
         return redirect()->action([RedirectController::class, 'redirectHello'], ['name' => 'rio']);
     }
     
+    
+    // REDIRECT TO EXTERNAL DOMAIN
+    public function externalDomain(): RedirectResponse
+    {
+        return redirect()->away('www.rioganteng.com');
+    }
 
 }
