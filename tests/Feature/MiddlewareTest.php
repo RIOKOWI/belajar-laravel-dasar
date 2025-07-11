@@ -23,19 +23,34 @@ class MiddlewareTest extends TestCase
         ->assertStatus(200)
         ->assertSeeText('OK');
     }
-
+    
     public function testInvalidGroup()
     {
         $this->get('/middleware/group')
         ->assertStatus(401)
         ->assertSeeText('access denied');
     }
-
+    
     public function testValidGroup()
     {
         $this->withHeader('X-API-KEY', 'RIO')
         ->get('/middleware/group')
         ->assertStatus(200)
         ->assertSeeText('GROUP');
+    }
+
+    public function testInvalidParam()
+    {
+        $this->get('/middleware/param')
+        ->assertStatus(401)
+        ->assertSeeText('access denied');
+    }
+    
+    public function testValidParam()
+    {
+        $this->withHeader('X-API-KEY', 'RIO')
+        ->get('/middleware/param')
+        ->assertStatus(200)
+        ->assertSeeText('PARAM');
     }
 }

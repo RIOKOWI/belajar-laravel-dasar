@@ -14,14 +14,15 @@ class ContohMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next)
+                                                            // middleware parameter
+    public function handle(Request $request, Closure $next, string $key, int $status)
     {
         $apikey = $request->header('X-API-KEY');
 
-        if ($apikey == 'RIO'){
+        if ($apikey == $key){
             return $next($request);
         } else {
-            return response('access denied', 401);
+            return response('access denied', $status);
         };
     }
 }

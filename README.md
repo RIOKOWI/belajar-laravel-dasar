@@ -263,3 +263,6 @@ registrasikan middleware satu satu per route atau bisa langsung buat group middl
 
 ## MIDDLEWARE GROUP
 membuat group middleware agar bisa di pakai secara global
+
+## MIDDLEWARE PARAMETER
+membuat middleware yang bisa menerima parameter

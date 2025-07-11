@@ -22,8 +22,6 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        ContohMiddleware::class,
-        //menambahakan secara global
     ];
 
     /**
@@ -47,7 +45,8 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
         'rio' => [
-            ContohMiddleware::class,
+            'contoh:RIO,401'
+            // ContohMiddleware::class,
             //boleh tambah middleware lagi
         ]
     ];
@@ -70,7 +69,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'contoh' => ContohMiddleware::class,
+        'contoh' => \App\Http\Middleware\ContohMiddleware::class,
         //menambahakan secara route dengan alias 'contoh'
     ];
 }

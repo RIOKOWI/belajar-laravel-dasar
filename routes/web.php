@@ -196,10 +196,17 @@ Route::get('/redirect/external', [RedirectController::class, 'externalDomain']);
 // ROUTE MIDDLEWARE
 Route::get('/middleware/api', function(){
     return 'OK';
-})->middleware(['contoh']);
+})->middleware('contoh:RIO,401');
               // boleh pakai ContohMIddleware::class
 
 // MIDDLEWARE GROUP
 Route::get('/middleware/group', function(){
     return 'GROUP';
 })->middleware(['rio']);
+
+// MIDDLEWARE PARAMETER
+Route::get('/middleware/param', function(){
+    return 'PARAM';
+})->middleware('contoh:RIO,401');
+
+
