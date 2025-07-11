@@ -28,4 +28,17 @@ class RedirectControllerTest extends TestCase
         
     }
 
+    public function testRedirectController()
+    {
+        $this->get('/redirect/controll')
+        ->assertSeeText('HALO cuk');
+        
+    }
+    public function testRedirectController1()
+    {
+        $this->get('/redirect/controll/embut')
+        ->assertSeeText('HALO embut');
+        
+    }
+
 }

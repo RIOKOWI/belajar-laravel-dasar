@@ -19,13 +19,22 @@ class RedirectController extends Controller
     }
 
     // REDIRECT TO NAMED ROUTES
+    public function redirectHello(string $name): string
+    {
+        return "hello " . $name;
+    }
+
     public function redirectName(): RedirectResponse
     {
         return redirect()->route('redirect-hello', ['name' => 'rio']);
     }
 
-    public function redirectHello(string $name): string
+
+    // REDIRECT TO CONTOLLER ACTION
+    public function redirectAction(): RedirectResponse
     {
-        return "hello " . $name;
+        return redirect()->action([RedirectController::class, 'redirectHello'], ['name' => 'rio']);
     }
+    
+
 }

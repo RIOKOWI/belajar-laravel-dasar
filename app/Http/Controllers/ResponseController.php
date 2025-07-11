@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -54,6 +55,7 @@ class ResponseController extends Controller
         return response()->download(storage_path('app/public/pictures/1.jpg'));
         // dipaksa di download
     }
+
     
 }
 
