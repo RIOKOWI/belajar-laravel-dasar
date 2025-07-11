@@ -198,3 +198,8 @@ Route::get('/middleware/api', function(){
     return 'OK';
 })->middleware(['contoh']);
               // boleh pakai ContohMIddleware::class
+
+// MIDDLEWARE GROUP
+Route::get('/middleware/group', function(){
+    return 'GROUP';
+})->middleware(['rio']);
