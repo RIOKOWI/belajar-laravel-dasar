@@ -195,16 +195,16 @@ Route::get('/redirect/action', [RedirectController::class, 'redirectAction']);
 // REDIRECT TO EXTERNAL DOMAIN
 Route::get('/redirect/external', [RedirectController::class, 'externalDomain']);
 
-// ROUTE MIDDLEWARE
-Route::get('/middleware/api', function(){
-    return 'OK';
-})->middleware('contoh:RIO,401');
-              // boleh pakai ContohMIddleware::class
+// // ROUTE MIDDLEWARE
+// Route::get('/middleware/api', function(){
+//     return 'OK';
+// })->middleware('contoh:RIO,401');
+//               // boleh pakai ContohMIddleware::class
 
-// MIDDLEWARE GROUP
-Route::get('/middleware/group', function(){
-    return 'GROUP';
-})->middleware(['rio']);
+// // MIDDLEWARE GROUP
+// Route::get('/middleware/group', function(){
+//     return 'GROUP';
+// })->middleware(['rio']);
 
 // MIDDLEWARE PARAMETER
 Route::get('/middleware/param', function(){
@@ -224,4 +224,14 @@ Route::prefix('/response/type')->group(function (){
     Route::get('/json',[ResponseController::class, 'jsonResponse']);
     Route::get('/file',[ResponseController::class, 'responFile']);
     Route::get('/download',[ResponseController::class, 'responseDownload']);
+});
+
+// ROUTE MIDDLEWARE
+Route::middleware(['contoh:RIO,401'])->group(function(){
+    Route::get('/middleware/api', function() {
+        return "OK";
+    });
+    Route::get('/middleware/group', function(){
+    return 'GROUP';
+});
 });
