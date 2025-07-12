@@ -243,5 +243,7 @@ Route::controller(CookieController::class)->group(function(){
 });
 // ROUTE MULTIPLE ROUTE GROUP
 Route::middleware(['contoh:RIO,401'])->prefix('/middleware')->group(function(){
-    Route::get()
-})
+    Route::get('/api', function(){
+        return "OK";
+    });
+});
