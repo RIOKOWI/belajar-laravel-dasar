@@ -218,3 +218,10 @@ Route::post('/file/upload', [FileController::class, 'upload'])->withoutMiddlewar
 Route::get('/form', [FormCsrfController::class, 'form']);
 Route::post('/form', [FormCsrfController::class, 'submitForm']);
 
+// ROUTE GROUP
+Route::prefix('/response/type')->group(function (){
+    Route::get('/view',[ResponseController::class, 'responseView']);
+    Route::get('/json',[ResponseController::class, 'jsonResponse']);
+    Route::get('/file',[ResponseController::class, 'responFile']);
+    Route::get('/download',[ResponseController::class, 'responseDownload']);
+});

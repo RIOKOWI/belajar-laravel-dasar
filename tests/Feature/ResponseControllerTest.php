@@ -50,5 +50,32 @@ class ResponseControllerTest extends TestCase
         $this->get('/response/download')
         ->assertDownload("1.jpg");
     }
+
+    // ROUTE GROUP
+    public function testViewGroup()
+    {
+        $this->get('/response/type/view')
+        ->assertStatus(200)
+        ->assertSeeText('Rio Achyar');
+    }
+
+    public function testJsonGroup()
+    {
+        $this->get('/response/type/json')
+        ->assertJson(['firstName' => 'Rio', 'lastName '=> 'Achyar']);
+    }
+
+    
+    public function testFileGroup()
+    {
+        $this->get('/response/type/file')
+        ->assertHeader('Content-type', 'text/html; charset=UTF-8');
+    }
+
+    public function testDownloadGroup()
+    {
+        $this->get('/response/type/download')
+        ->assertDownload("1.jpg");
+    }
 }
 
