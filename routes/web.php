@@ -218,14 +218,14 @@ Route::post('/file/upload', [FileController::class, 'upload'])->withoutMiddlewar
 Route::get('/form', [FormCsrfController::class, 'form']);
 Route::post('/form', [FormCsrfController::class, 'submitForm']);
 
-// ROUTE GROUP
+//ROUTE GROUP
+// ROUTE PREFIX
 Route::prefix('/response/type')->group(function (){
     Route::get('/view',[ResponseController::class, 'responseView']);
     Route::get('/json',[ResponseController::class, 'jsonResponse']);
     Route::get('/file',[ResponseController::class, 'responFile']);
     Route::get('/download',[ResponseController::class, 'responseDownload']);
 });
-
 // ROUTE MIDDLEWARE
 Route::middleware(['contoh:RIO,401'])->group(function(){
     Route::get('/middleware/api', function() {
@@ -233,5 +233,15 @@ Route::middleware(['contoh:RIO,401'])->group(function(){
     });
     Route::get('/middleware/group', function(){
     return 'GROUP';
+    });
 });
+// ROUTE CONTROLLER
+Route::controller(CookieController::class)->group(function(){
+    Route::get('/cookie/set', 'createCookie');
+    Route::get('/cookie/get', 'getCookie');
+    Route::get('/cookie/clear', 'clearCookie');
 });
+// ROUTE MULTIPLE ROUTE GROUP
+Route::middleware(['contoh:RIO,401'])->prefix('/middleware')->group(function(){
+    Route::get()
+})
