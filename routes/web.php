@@ -6,6 +6,7 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\CookieController;
+use App\Http\Controllers\FormCsrfController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ResponseController;
 use App\Http\Controllers\InputTypeController;
@@ -213,4 +214,7 @@ Route::get('/middleware/param', function(){
 // EXCLUDE MIDDLEWARE
 Route::post('/file/upload', [FileController::class, 'upload'])->withoutMiddleware([VerifyCsrfToken::class]);
 
+// CSRF
+Route::get('/form', [FormCsrfController::class, 'form']);
+Route::post('/form', [FormCsrfController::class, 'submitForm']);
 

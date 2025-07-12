@@ -269,3 +269,10 @@ membuat middleware yang bisa menerima parameter
 
 ## EXCLUDE MIDDLEWARE
 membuat middleware yang bisa di exclude withoutMiddleware()
+
+## CROSS SITE REQUEST FORGERY (CSRF)
+untuk menghindari serangan CSRF
+contoh di file : 
+web.php
+FormCsrfController.php
+csrf.blade.php
