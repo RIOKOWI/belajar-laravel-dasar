@@ -1,17 +1,18 @@
 <?php
 
 use GuzzleHttp\Psr7\Response;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
+use App\Http\Middleware\VerifyCsrfToken;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\InputController;
+use App\Http\Middleware\ContohMiddleware;
 use App\Http\Controllers\CookieController;
 use App\Http\Controllers\FormCsrfController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ResponseController;
 use App\Http\Controllers\InputTypeController;
-use App\Http\Middleware\ContohMiddleware;
-use App\Http\Middleware\VerifyCsrfToken;
 
 /*
 |--------------------------------------------------------------------------
@@ -241,9 +242,15 @@ Route::controller(CookieController::class)->group(function(){
     Route::get('/cookie/get', 'getCookie');
     Route::get('/cookie/clear', 'clearCookie');
 });
-// ROUTE MULTIPLE ROUTE GROUP
+//  MULTIPLE ROUTE GROUP
 Route::middleware(['contoh:RIO,401'])->prefix('/middleware')->group(function(){
     Route::get('/api', function(){
         return "OK";
     });
+});
+
+//URL GENERATION
+Route::get('url/current', function(){
+    return URL::full();
+        // URL::current tidak bisa dapat query param
 });
