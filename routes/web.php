@@ -258,3 +258,9 @@ Route::get('url/current', function(){
 Route::get('/url/named', function(){
     return route('redirect-hello', ['name' => 'rio']);
 });
+// URL CONTROLLER ACTION
+Route::get('/url/action', function(){
+    return action([FormCsrfController::class, 'form']);
+    // return url()->action([FormCsrfController::class, 'form']);
+    // return URL::action([FormCsrfController::class, 'form']);
+});
