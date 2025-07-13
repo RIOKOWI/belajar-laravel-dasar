@@ -254,3 +254,7 @@ Route::get('url/current', function(){
     return URL::full();
         // URL::current tidak bisa dapat query param
 });
+// URL NAMED ROUTES
+Route::get('/url/named', function(){
+    return route('redirect-hello', ['name' => 'rio']);
+});
