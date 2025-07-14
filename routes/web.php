@@ -13,6 +13,7 @@ use App\Http\Controllers\FormCsrfController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ResponseController;
 use App\Http\Controllers\InputTypeController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -264,3 +265,7 @@ Route::get('/url/action', function(){
     // return url()->action([FormCsrfController::class, 'form']);
     // return URL::action([FormCsrfController::class, 'form']);
 });
+
+// SESSION
+// MENYIMPAN DATA KE SESSION
+Route::get('/session/create', [SessionController::class, 'createSession']);
