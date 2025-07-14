@@ -269,3 +269,5 @@ Route::get('/url/action', function(){
 // SESSION
 // MENYIMPAN DATA KE SESSION
 Route::get('/session/create', [SessionController::class, 'createSession']);
+// MENGAMBIL DATA DARI SESSION
+Route::get('/session/get', [SessionController::class, 'ambilSession']);

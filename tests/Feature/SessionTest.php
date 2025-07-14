@@ -16,4 +16,18 @@ class SessionTest extends TestCase
         ->assertSessionHas("userId", 'rio')
         ->assertSessionHas("isMember", true);
     }
+
+    public function testGetSession()
+    {
+        $this->withSession(['userId' => 'rio', 'isMember' => true])->get('/session/get')
+        ->assertSeeText("rio")
+        ->assertSeeText(true);
+    }
+
+    public function testGetSessionFailed()
+    {
+        $this->get('/session/get')
+        ->assertSeeText("guest")
+        ->assertSeeText("false");
+    }
 }

@@ -24,4 +24,17 @@ class SessionController extends Controller
         //invalidate()
 
     }
+
+    // MENGAMBIL DATA DARI SESSION
+    // get()
+    // all()
+    // has()
+    // missing()
+    public function ambilSession(Request $request): string
+    {
+        $userId = $request->session()->get('userId', 'guest');
+        $isMember = $request->session()->get('isMember', 'false');
+
+        return "User Id : ${userId}, Is Member : ${isMember}";  
+    }
 }
