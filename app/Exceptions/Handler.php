@@ -2,8 +2,10 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+
+use Illuminate\Http\Request;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -50,6 +52,10 @@ class Handler extends ExceptionHandler
         });
             $this->reportable(function (Throwable $e){
                 var_dump($e);
+        });
+        // RENDERIMG EXCEPTION
+        $this->renderable(function(ValidationException $exception, Request $request){
+            return response("Bad Request", 401);
         });
     }
 }
