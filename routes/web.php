@@ -286,3 +286,15 @@ Route::get('/error/manual', function(){
 Route::get('/error/validation', function(){
     throw new ValidationException("Validation Error");
 });
+
+// HTTP EXCEPTION
+Route::get('/abort/400', function(){
+    abort(400, "error maasseeeeh");
+    // template view nya di resources/views/errors/400.blade.php
+});
+Route::get('/abort/401', function(){
+    abort(401);
+});
+Route::get('/abort/402', function(){
+    abort(402);
+});

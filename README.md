@@ -305,3 +305,9 @@ SessionController.php
 
 ## ERROR HANDLING
 contoh di file :
+web.php
+Handler.php
+ValidationException.php
+
+## HTTP EXCEPTION
+contoh di file :
