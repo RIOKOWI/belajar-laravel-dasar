@@ -271,3 +271,8 @@ Route::get('/url/action', function(){
 Route::get('/session/create', [SessionController::class, 'createSession']);
 // MENGAMBIL DATA DARI SESSION
 Route::get('/session/get', [SessionController::class, 'ambilSession']);
+
+// ERROR HANDLING
+Route::get('/error/sample', function(){
+    throw new Exception("Sample Error");
+});
