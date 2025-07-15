@@ -311,3 +311,15 @@ ValidationException.php
 
 ## HTTP EXCEPTION
 contoh di file :
+web.php
+400.blade.php
+
+## MAINTENANCE MODE
+contoh di file :
+storage/framewrok/down
+## php artisan down
+untuk menyalakan maintenance mode
+## php artisan up
+untuk mematikan maintenance mode
+## php artisan down --secret="yoursecretkeyhere"
+untuk mengakses web ketika maintenance mode
