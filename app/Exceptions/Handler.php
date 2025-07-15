@@ -23,6 +23,7 @@ class Handler extends ExceptionHandler
      */
     protected $dontReport = [
         //
+        ValidationException::class  
     ];
 
     /**
@@ -43,8 +44,12 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        $this->reportable(function (Throwable $e){  
+            var_dump($e);
+            return false; //jika yang bawah tidak mau di eksekusi
+        });
+            $this->reportable(function (Throwable $e){
+                var_dump($e);
         });
     }
 }

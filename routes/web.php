@@ -1,5 +1,6 @@
 <?php
 
+use App\Exceptions\ValidationException;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Route;
@@ -280,4 +281,8 @@ Route::get('/error/sample', function(){
 Route::get('/error/manual', function(){
     report(new Exception("Sample Error"));
     return "OK";
+});
+//IGNORE REPORT
+Route::get('/error/validation', function(){
+    throw new ValidationException("Validation Error");
 });
