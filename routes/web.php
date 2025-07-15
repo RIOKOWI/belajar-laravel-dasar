@@ -276,3 +276,8 @@ Route::get('/session/get', [SessionController::class, 'ambilSession']);
 Route::get('/error/sample', function(){
     throw new Exception("Sample Error");
 });
+// ERROR MANUAL REPORT
+Route::get('/error/manual', function(){
+    report(new Exception("Sample Error"));
+    return "OK";
+});
