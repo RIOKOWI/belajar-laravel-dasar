@@ -323,3 +323,11 @@ untuk menyalakan maintenance mode
 untuk mematikan maintenance mode
 ## php artisan down --secret="yoursecretkeyhere"
 untuk mengakses web ketika maintenance mode
+
+## MENAMPILKAN DETAIL ERROR
+contoh di file :
+config/app.php
+
+bagian :
+'debug' => (bool) env('APP_DEBUG', true),
+                                    // kalau di production ubah jadi false
